@@ -1,4 +1,4 @@
-
+"use client";
 import React, {  useEffect, useState } from 'react';
 
 const useApps = () => {
@@ -13,9 +13,10 @@ const useApps = () => {
           const data = await res.json();
         //   console.log(data, "apps data");
           
-          
-              setApps(data);
-          setLoading(false);      
+      setTimeout( () => {
+          setApps(data);
+          setLoading(false); 
+      }, 1000)
          
           
         };
