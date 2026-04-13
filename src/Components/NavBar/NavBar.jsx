@@ -1,14 +1,18 @@
-'use client';
+
 import React from 'react';
 import navLogo from '../../assets/logo.png'; 
 import { FaGithub } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import PathName from './PathName';
+
+
+
 
 const NavBar = () => {
    
-    const pathName = usePathname();
+     
+    const pathName = PathName
 
     const navLinksData = [
         { label: 'Home', href: '/' },
@@ -21,17 +25,7 @@ const NavBar = () => {
         <>
             {navLinksData.map(link => (
                 <li key={link.href} className="relative">
-                    <Link 
-                        className={`font-medium w-full ${pathName === link.href ? 'text-primary' : 'text-neutral-700'}`} 
-                        href={link.href}
-                    >
-                        {link.label}
-                        
-                        {/* Active Indicator */}
-                        {pathName === link.href && (
-                            <span className="absolute left-0 -bottom-1.5 h-0.5 w-full bg-primary rounded-full hidden lg:block"></span>
-                        )}
-                    </Link>
+                    <PathName href={link.href}>{link.label}</PathName>
                 </li>
             ))}
         </>
