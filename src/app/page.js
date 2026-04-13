@@ -2,8 +2,9 @@
 
 export default function Home() {
   return (
-    <h3 className="text-2xl font-bold text-center mt-10 bg-amber-200">
-      Hello World! This is a Next.js application with Tailwind CSS and DaisyUI.
-    </h3>
+    <div className="min-h-screen">
+      <h1 className="text-4xl font-bold text-center mt-10">Welcome to App Store Web</h1>
+      <p className="text-center mt-4 text-lg">Explore and manage your applications with ease.</p>
+    </div>
   );
 }

@@ -1,6 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/Components/NavBar/NavBar";
+import Footer from "@/Components/Footer/Footer";
+
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "App Store Web",
-  description: "A Next.js application with Tailwind CSS and DaisyUI.",
+  title: "HERO.IO",
+  description: "HERO.IO is a platform that allows users to create and share their own apps. With HERO.IO, you can easily build and deploy your apps without any coding knowledge. Whether you want to create a simple app for personal use or a complex app for your business, HERO.IO has got you covered.",
 };
 
 export default function RootLayout({ children }) {
@@ -29,9 +33,17 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/logo.png" />
       </head>
       <body className="min-h-full flex flex-col">
-        <NavBar />
-        {children}
-        </body>
+       <header>
+        <NavBar/>
+       </header>
+        <main>
+          {children}
+        </main>
+        <footer>
+          <Footer/>
+        </footer>
+
+      </body>
     </html>
   );
 }

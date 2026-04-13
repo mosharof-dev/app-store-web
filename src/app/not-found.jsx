@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function NotFound() {
     return (
         
-        <div className="min-h-screen flex flex-col items-center justify-center px-4 space-y-6 bg-[#f8f9fc]">
+        <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 space-y-6 bg-[#f8f9fc]">
             
             {/* Image Section */}
             <div className="flex justify-center">
