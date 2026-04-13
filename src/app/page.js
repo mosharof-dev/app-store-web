@@ -13,7 +13,7 @@ export default function Home() {
   <>
    <Banner/>
     <Stats/>
-    <TrandingApps/>
+    <TrandingApps from="HomePage" />
    </>
    
   );
